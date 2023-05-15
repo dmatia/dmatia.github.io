@@ -120,6 +120,9 @@ header{
   text-align: right;
 }
 
+.title{
+  cursor: pointer;
+}
 
 
 
