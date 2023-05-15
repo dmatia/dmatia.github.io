@@ -120,6 +120,9 @@ header{
   text-align: right;
 }
 
+.experience pre{
+
+}
 
 
 
@@ -211,6 +214,18 @@ opacity: 1;
 
 }
 
+.experience_exp{
+  background-color: #0077b5;
+}
+
+.main_experience {
+  background-color: #fff;
+  background-image: none;
+  background-image: url(img/EA0CC16B-D9C0-4AFB-BB3C-F52287D72321.jpg);
+  background-size: contain;
+  background-position: left;
+  }
+  
 
 .ocultar{
 display: none;
