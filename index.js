@@ -15,8 +15,12 @@ secciones.forEach((elemento, clave) => {
       case 2:
         clase = "main_experience";
         break;
+        case 3:
+        clase = "main_projects";
+        break;
     }
     contenedor.classList.toggle(`${clase}`);
+    // alert(clave + " clase:" +clase);
 
     clase = "";
 
@@ -26,30 +30,41 @@ secciones.forEach((elemento, clave) => {
         break;
       case 1:
         clase = "do_exp";
-
         break;
       case 2:
         clase = "experience_exp";
-
+        break;
+        case 3:
+        clase = "projects_exp";
         break;
     }
     secciones[clave].classList.toggle(`${clase}`);
+      cuerposec[clave].classList.toggle("visible");
 
-    cuerposec[clave].classList.toggle("visible");
+
+   // alert(clave + " clase:" +clase);
 
     switch (clave) {
       case 0:
         secciones[1].classList.toggle("ocultar");
         secciones[2].classList.toggle("ocultar");
+        secciones[3].classList.toggle("ocultar");
         break;
       case 1:
         secciones[0].classList.toggle("ocultar");
         secciones[2].classList.toggle("ocultar");
-
+        secciones[3].classList.toggle("ocultar");
         break;
       case 2:
         secciones[0].classList.toggle("ocultar");
         secciones[1].classList.toggle("ocultar");
+        secciones[3].classList.toggle("ocultar");
+        break;
+    case 3:
+        secciones[0].classList.toggle("ocultar");
+        secciones[1].classList.toggle("ocultar");
+        secciones[2].classList.toggle("ocultar");
+        break;
     }
   });
 });

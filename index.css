@@ -113,16 +113,14 @@ header{
 }
 
 .section_body{
-  display: none;
+  display: none  !important;
   }
 
 #do {
   text-align: right;
 }
 
-.experience pre{
 
-}
 
 
 
@@ -159,7 +157,7 @@ padding-top: 15vh;
 
 
 .visible{
-  display: inherit;
+  display: grid !important;;
 }
 
 .main_aboutme{
@@ -225,9 +223,45 @@ opacity: 1;
   background-size: contain;
   background-position: left;
   }
+
+  .main_projects{
+    background: linear-gradient(90deg,
+     rgba(253,159,85,1) 0%,
+      rgba(254,46,106,1) 17%,
+       rgba(255,0,5,1) 35%,
+        rgba(143,163,0,1) 51%,
+         rgba(53,104,254,1) 70%,
+          rgba(252,70,172,1) 84%,
+           rgba(251,252,70,1) 100%);
+  }
+
+  .projects_exp{
+    display: block;
+    height: 10vh;
+  }
+  .projects_exp::before{
+    content: " ";
+  }
+
+  .projects{
+    display: grid;
+    grid-template-columns: 50% 50% 50% 50%;
+    overflow-x: auto;
+  }
   
+  .project_child {
+    height: 70vh;
+    border: 10px solid #d62976;
+    border-radius: 25px;
+    margin: 0 0 .1em .1em;
+    background-color: aliceblue;
+  }
+  
+  .project_child :nth-child(3){
+    grid-area: "uno";
+  }
+
 
 .ocultar{
-display: none;
-position: absolute;
+display: none !important;
 }
