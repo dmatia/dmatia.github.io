@@ -98,6 +98,8 @@ header{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: grid;
+  align-content: center;
 }
 
 .main a, p, pre{
@@ -116,14 +118,70 @@ header{
   display: none  !important;
   }
 
-#do {
+#do, #contact {
   text-align: right;
+  margin-right: 1rem;
 }
 
 .title{
-  cursor: pointer;
+cursor: pointer;
+transition: 0.3s ease-in-out;
+margin-left: 1rem;
 }
 
+.title:hover {
+font-size: 8rem;
+color: white;
+}
+
+.contact form{
+  font-family: 'Coolveti';
+  text-align: center;
+  text-justify: left;
+  height: auto;
+  margin: 0 auto;
+  text-align: left;
+  padding: .5em;
+  border: 20px solid #ccc;
+  background: #1549aa;
+  border-radius: 15px;
+}
+
+label {
+  color: #fff;
+  font-size: 4rem;
+  
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  max-width: 51vw;
+  max-height: 200px;
+  font-size: 2rem;
+  font-family: 'Coolveti';
+}
+
+ input[type="cancel"], input[type="submit"]{
+  font-family: 'Coolveti';
+  text-align: center;
+  width: 12vw;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 4rem;
+  float: right;
+  margin: 2px
+}
+
+input[type="submit"]:hover, input[type="cancel"]:hover {
+  background-color: rgba(253,111,132,1);
+}
 
 
 
@@ -215,10 +273,6 @@ opacity: 1;
 
 }
 
-.experience_exp{
-  background-color: #0077b5;
-}
-
 .main_experience {
   background-color: #fff;
   background-image: none;
@@ -253,18 +307,56 @@ opacity: 1;
   }
   
   .project_child {
-    height: 70vh;
     border: 10px solid #d62976;
     border-radius: 25px;
     margin: 0 0 .1em .1em;
     background-color: aliceblue;
   }
-  
-  .project_child :nth-child(3){
-    grid-area: "uno";
+
+  .project_child .info{
+    font-size: 2.5rem;
+    width: 90%;
+    margin: auto;
   }
 
+  .child_title{
+    display: block;
+    font-size: 4rem;
+    background-color: #d62976;
+    line-height: 2;
+  }
+
+  .project_child img{
+    display: block;
+    max-width: 90%;
+    margin: .2em auto;
+    border: 3px solid #0077b5;
+    }
+
+.buttons{
+  text-align: center;
+  margin: auto;
+  height: 10vh;
+  background-color: #d62976;
+  }
+
+  .buttons button{
+    font-family: 'Coolveti';
+    color: #fff;
+    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
+    width: 15vh;
+    height: 5vh;
+    font-size: 2rem;
+  }
+
+  .buttons button:hover{
+    text-shadow: -2px 2px #000;
+  }
 
 .ocultar{
 display: none !important;
 }
+ *::selection{
+  background-color: #feda75;
+ }
