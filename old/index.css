@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+  overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Coolveti';
+    src: url(coolveti.ttf);
+}
+
+@font-face {
+    font-family: 'Arkinson';
+    src: url(Atkinson-Hyperlegible-Bold-102.otf);
+}
+/* ------------------------------ */
+/*              HEADER            */ 
+/* ------------------------------ */
+
+header{
+    width: 70vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /*background-color: bisque;*/
+    margin: auto;
+    align-items: center;
+    font-family: 'Coolveti';
+}
+
+.header-left h1{
+    font-size: 5rem;
+    transition: color 1.5s ease-out, font-size .5s;
+}
+
+.header-left h1:hover{
+    font-size: 6rem;
+    color: #ff8a00;
+}
+
+
+
+.header-right{
+    text-align: right;
+    font-size: 4rem;
+}
+.header-right a{
+    transition: .3s;
+}
+
+.header-right a{
+    color: #000;
+    text-decoration: none;
+}
+
+.header-right a:hover{
+    font-size: 4.5rem;
+}
+
+.fa-linkedin:hover{
+    color: #0077b5;
+}
+
+
+.fa-instagram:hover{
+    background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.inicio {
+    background-image: url(img/PICT0038.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 85vh;
+    margin: auto;
+    position: static;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+    overflow: hidden;
+}
+
+.behind{
+  background: none;
+  background-image: url(img/EA0CC16B-D9C0-4AFB-BB3C-F52287D72321.jpg);
+    width: 70vw;
+    height: 85vh;
+    margin: auto;
+    position: static;
+}
+
+/* JS */
+
+.section_title a{
+  display: block;
+  font-family: 'Coolveti';
+  font-size: 6rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.section_title a:hover {
+  font-size: 6.5rem;
+  color: white;
+}
+
+section{
+    /*width: 70vw;
+    *height: 85vh;
+   display: grid;
+    grid-template-rows: 30% 70%;
+    background-image: url(img/a.jpg);
+    background-size: cover;*/
+
+}
+
+section 
+
+  #do, #contact{
+    text-align: right;
+  }
+
+.about pre{
+width: 80vw;
+height: 85vh;
+font-size: 4rem;
+font-family: 'Coolveti';
+}
+
+
+
+.do{
+    text-align: right;
+    font-family: 'Coolveti';
+    font-size: 5rem;
+    background: rgb(253,29,29);
+    background: radial-gradient(circle, rgba(255,0,5,1) 0%,
+     rgba(253,159,85,1) 15%,
+      rgba(254,46,106,1) 27%,
+       rgba(143,163,0,1) 40%,
+        rgba(53,104,254,1) 62%,
+         rgba(253,111,132,1) 75%,
+          rgba(254,198,48,1) 83%,
+           rgba(252,70,172,1) 100%);
+    position: relative;
+    z-index: 1;
+    height: 80vh;
+}
+
+.do::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to left,
+        rgba(255,248,0,1) 0%, 
+        rgba(252,70,172,1) 100%);
+        z-index: -1;
+        transition: opacity 15s  ease-in-out;
+        opacity: 0;
+      }
+
+  .do:hover::before {
+    opacity: 1;
+  }
+
+
+
+
+  .experience {
+     background-color: #fff;
+     background-image: url(img/EA0CC16B-D9C0-4AFB-BB3C-F52287D72321.jpg);
+     background-size: contain;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 85VH;
+     overflow: auto;
+     scroll-behavior: smooth;
+  }
+
+  .experience::-webkit-scrollbar{
+    display: none;
+  }
+
+  .experience pre{
+    font-family: 'Coolveti';
+    font-size: 4rem;
+  }
+
+
+  .projects{
+ height: 85vh;
+ overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  }
+
+  .item{
+    width: 100%;
+    height: 75vh;
+    display: inline-block;
+    background-color: #962fbf;
+    border: 5px  solid seagreen;
+  }
+
+
+
+
+.contact{
+    text-align: right;
+    font-family: 'Coolveti';
+    overflow: auto;
+    background-image: url();
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 4px solid #ccc;
+    background-color: #4f5bd5;
+    border-radius: 5px;
+  }
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  label {
+    font-size: 4rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="cancel"]{
+    margin-left: 28vw;
+  }
+
+  input[type="submit"], input[type="cancel"]{
+    font-family: 'Coolveti';
+    width: 12vw;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 4em;
+  }
+  
+  input[type="submit"]:hover, input[type="cancel"]:hover {
+    background-color: #45a049;
+  }
+
+
+footer{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+/* ----------------------------------------- /*
+/* ----------------------------------------- */
+/* ----------------------------------------- /*
+/* ----------------------------------------- */
+
+/* ESTILOS PARA MANEJAR CON JS */
+
+.ocultar{
+    visibility: hidden;
+    position: absolute;
+}
