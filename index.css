@@ -149,14 +149,14 @@ color: white;
   margin: 0 auto;
   text-align: left;
   padding: .5em;
-  border: 20px solid #ccc;
+  border: 10px solid #ccc;
   background: #1549aa;
   border-radius: 15px;
 }
 
 label {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   
 }
 
@@ -181,7 +181,7 @@ input, textarea {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 3rem;
   float: right;
   margin: 2px
 }
@@ -378,7 +378,6 @@ font-size: 2rem;
 .buttons{
   text-align: center;
   margin: auto;
-  height: 10vh;
   background-color: #d62976;
   }
 
@@ -388,7 +387,7 @@ font-size: 2rem;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
     width: 15vh;
-    height: 5vh;
+    height: min-content;
     font-size: 2rem;
   }
 
@@ -411,6 +410,7 @@ display: none !important;
  ----------------------------
  */
 
+ 
  @media screen and (max-width: 700px) {
   
 header{
@@ -479,7 +479,7 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
 }
 
 .title{
-  font-size: 8rem !important;
+  font-size: 7rem !important;
 }
 
 
