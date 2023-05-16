@@ -102,6 +102,7 @@ header{
   align-content: center;
 }
 
+
 .main a, p, pre{
   font-family: 'Coolveti';
 }
@@ -133,6 +134,12 @@ margin-left: 1rem;
 font-size: 8rem;
 color: white;
 }
+
+.title:hover::after{
+  font-family: Arial, Helvetica, sans-serif;
+  content: " abrir »";
+  font-size: 2rem;
+  }
 
 .contact form{
   font-family: 'Coolveti';
@@ -225,6 +232,7 @@ padding-top: 15vh;
   background-image: url(img/a.jpg);
   display: grid;
   grid-template-rows: 30% 70%;
+  box-shadow: -5px 5px #000;
 }
 
 
@@ -254,23 +262,34 @@ padding-top: 15vh;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to left,
-  rgba(255,248,0,1) 0%, 
-  rgba(253,111,132,1) 75%,
-  rgba(252,70,172,1) 100%);
+  background-image: radial-gradient(circle, rgba(255,0,5,1) 0%,
+    rgba(143,163,0,1) 20%,
+     rgba(53,104,254,1) 35%,
+      rgba(253,111,132,1) 40%,
+       rgba(254,198,48,1) 53%,
+        rgba(252,70,172,1) 65%,
+        rgba(253,159,85,1) 75%,
+        rgba(254,46,106,1) 100%);
   z-index: -1;
-  transition: opacity 5s ease-in;
+  transition: 5s ease-in;
   opacity: 0;
 }
 
 .main_do:hover::before {
 opacity: 1;
+transition: 3s ease-in;
 }
 
 .do_exp{
   display: block;
   padding-top: 10vh;
+  color: #fff
+}
 
+.titulo_exp:hover::after, .experience_exp:hover::after, .projects_exp:hover::after, .contact_exp:hover::after, .do_exp:hover::after{
+font-family: Arial, Helvetica, sans-serif;
+content: " cerrar »";
+font-size: 2rem;
 }
 
 .main_experience {
@@ -282,6 +301,8 @@ opacity: 1;
   }
 
   .main_projects{
+    border-radius: 20px;
+    padding: 1em;
     background: linear-gradient(90deg,
      rgba(253,159,85,1) 0%,
       rgba(254,46,106,1) 17%,
@@ -292,14 +313,30 @@ opacity: 1;
            rgba(251,252,70,1) 100%);
   }
 
+*::-webkit-scrollbar{
+    width: 1rem;
+    height: 1rem;
+  }
+*::-webkit-scrollbar-thumb{
+    background-color: #fff;
+  }
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: #777;
+  }
+
+  *::-webkit-scrollbar-track-piece{
+    color: #0077b5;
+  }
+
+
+  
+
   .projects_exp{
     display: block;
     height: 10vh;
   }
-  .projects_exp::before{
-    content: " ";
-  }
-
+  
   .projects{
     display: grid;
     grid-template-columns: 50% 50% 50% 50%;
@@ -307,16 +344,21 @@ opacity: 1;
   }
   
   .project_child {
+    height: min-content;
+    max-height: 70vh;
+    background-color: #d62976;
     border: 10px solid #d62976;
     border-radius: 25px;
     margin: 0 0 .1em .1em;
     background-color: aliceblue;
+    overflow-y: auto;
   }
 
   .project_child .info{
     font-size: 2.5rem;
     width: 90%;
     margin: auto;
+    background-color: #fff;
   }
 
   .child_title{
@@ -344,7 +386,7 @@ opacity: 1;
     font-family: 'Coolveti';
     color: #fff;
     background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
     width: 15vh;
     height: 5vh;
     font-size: 2rem;
@@ -359,4 +401,90 @@ display: none !important;
 }
  *::selection{
   background-color: #feda75;
+ }
+
+/*
+ ------------------------------ 
+ ------------------------------
+         DISP. MOVILES
+ -----------------------------
+ ----------------------------
+ */
+
+ @media screen and (max-width: 700px) {
+  
+header{
+  width: 100vw;
+  height: 5vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: auto;
+  align-items: left;
+  font-family: 'Coolveti';
+}
+
+.header-left h1{
+  font-size: 3rem;
+  transition: color 1.5s ease-out, font-size .5s;
+}
+
+.header-left h1:hover{
+  font-size: 3.3rem;
+  color: #ff8a00;
+}
+
+
+
+.header-right{
+  text-align: right;
+  font-size: 2rem;
+}
+.header-right a{
+  transition: .3s;
+}
+
+.header-right a{
+  color: #000;
+  text-decoration: none;
+}
+
+.header-right a:hover{
+  font-size: 2.5rem;
+}
+
+.fa-linkedin:hover{
+  color: #0077b5;
+}
+
+.fa-instagram:hover{
+background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#main{
+  height: 90vh;
+  width: 100vw;
+}
+
+.main_aboutme{
+  background-color: #fa7e1e;
+  background-size: contain;
+  background-position: top;
+}
+
+.section_body p{
+  
+  font-size: 5rem;
+}
+
+.title{
+  font-size: 8rem !important;
+}
+
+
+
+
+
+
  }
