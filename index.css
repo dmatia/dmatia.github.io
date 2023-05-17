@@ -44,12 +44,47 @@ header{
 
 .header-left h1{
     font-size: 5rem;
-    transition: color 1.5s ease-out, font-size .5s;
+    transition: .5s;
 }
 
-.header-left h1:hover{
-    font-size: 6rem;
-    color: #ff8a00;
+
+.header-left h1:hover {
+  font-size: 5.2rem;
+  transition: .5s;
+  animation: animacion 3s infinite;
+}
+
+@keyframes animacion{
+  0%{
+    color: #000;
+  }
+  5%{
+    color: #ffce46;
+   }
+  15%{
+    color: #f8a530;
+  }
+  30%{
+    color: #e97413;
+  }
+  45%{
+    color: #eb5009;
+  }
+  60%{
+    color: #ef4000;
+  }
+  75%{
+    color: #da0000;
+  }
+  90%{
+    color:#bb1c00;
+  }
+  97%{
+    color: #000;
+  }
+
+
+
 }
 
 
@@ -81,6 +116,15 @@ header{
 -webkit-text-fill-color: transparent;
 }
 
+.fa-github:hover{
+background: -webkit-linear-gradient(#a16eb6, #400c63);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.fa-download:hover{
+  color: #274225;
+  }
 
 /*
 ////////////////////////////////
@@ -110,11 +154,6 @@ header{
 .main a{
   font-size: 6.5rem;
 }
-
-.section{
-  font-size: 5rem;
-}
-
 .section_body{
   display: none  !important;
   }
@@ -128,10 +167,11 @@ header{
 cursor: pointer;
 transition: 0.3s ease-in-out;
 margin-left: 1rem;
+z-index: 2 !important;
 }
 
 .title:hover {
-font-size: 8rem;
+font-size: 7rem;
 color: white;
 }
 
@@ -146,24 +186,26 @@ color: white;
   text-align: center;
   text-justify: left;
   height: auto;
+  max-height: 70vh;
   margin: 0 auto;
   text-align: left;
   padding: .5em;
   border: 10px solid #ccc;
   background: #1549aa;
   border-radius: 15px;
+  overflow: auto;
 }
 
 label {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
   
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 5px;
+  padding: 5px;
+  margin-bottom: 2px;
   border: 1px solid #ccc;
   box-sizing: border-box;
   max-width: 51vw;
@@ -201,11 +243,36 @@ input[type="submit"]:hover, input[type="cancel"]:hover {
 */
 
 
-footer{
+footer, footer a{
+  font-family: 'Coolveti';
+   color: #aaa;
     text-align: center;
-    font-size: 1.5rem;
-    line-height: 2;
+    font-size: 2rem;
+    width: 70vw;
+    margin: auto;
 }
+
+footer a{
+  cursor: pointer;
+}
+
+footer p:hover, footer a:hover{
+  color: #888;
+}
+
+
+footer .a{
+float: left;
+}
+
+footer div{
+  float: right;
+}
+
+footer div a:hover::after{
+  content: " ↜ ";
+}
+
 
 
 /*
@@ -225,7 +292,8 @@ padding-top: 15vh;
 
 
 .visible{
-  display: grid !important;;
+  display: grid !important;
+  font-size: 4rem;
 }
 
 .main_aboutme{
@@ -235,10 +303,6 @@ padding-top: 15vh;
   box-shadow: -5px 5px #000;
 }
 
-
-.transicion{
-  transition: .3s ease-in;
-}
 
 .main_do{
   background: rgb(253,29,29);
@@ -253,9 +317,12 @@ padding-top: 15vh;
   position: relative;
   z-index: 1;
   height: 85vh;
+  border-radius: 25px;
+  transition: .5s ease-in-out;
 }
 
 .main_do::before {
+  border-radius: 25px;
   position: absolute;
   content: '';
   top: 0;
@@ -276,8 +343,10 @@ padding-top: 15vh;
 }
 
 .main_do:hover::before {
+  border-radius: 25px;
 opacity: 1;
 transition: 3s ease-in;
+
 }
 
 .do_exp{
@@ -286,10 +355,12 @@ transition: 3s ease-in;
   color: #fff
 }
 
+
 .titulo_exp:hover::after, .experience_exp:hover::after, .projects_exp:hover::after, .contact_exp:hover::after, .do_exp:hover::after{
 font-family: Arial, Helvetica, sans-serif;
 content: " cerrar »";
 font-size: 2rem;
+animation: title-expand;
 }
 
 .main_experience {
@@ -329,13 +400,6 @@ font-size: 2rem;
     color: #0077b5;
   }
 
-
-  
-
-  .projects_exp{
-    display: block;
-    height: 10vh;
-  }
   
   .projects{
     display: grid;
@@ -344,55 +408,68 @@ font-size: 2rem;
   }
   
   .project_child {
-    height: min-content;
-    max-height: 70vh;
-    background-color: #d62976;
-    border: 10px solid #d62976;
+    height: max-content;
+    max-height: 70vh;   
+    padding: .5em;
+    background-color: #d62976; 
     border-radius: 25px;
-    margin: 0 0 .1em .1em;
-    background-color: aliceblue;
+    margin: 0 .5em 0 .5em;
     overflow-y: auto;
+    box-shadow: -7px 7px #555;
   }
 
   .project_child .info{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     width: 90%;
     margin: auto;
+    padding: 5px;
     background-color: #fff;
+    box-shadow: -5px 5px #555;
   }
 
   .child_title{
     display: block;
-    font-size: 4rem;
+    font-size: 2rem;
     background-color: #d62976;
     line-height: 2;
+    padding-left: 1em;
   }
+
 
   .project_child img{
     display: block;
     max-width: 90%;
     margin: .2em auto;
-    border: 3px solid #0077b5;
+    margin-bottom: .1em;;
+    box-shadow: -4px 4px #555;
     }
 
 .buttons{
   text-align: center;
   margin: auto;
-  background-color: #d62976;
   }
 
-  .buttons button{
+  .buttons button, .buttons a{
     font-family: 'Coolveti';
     color: #fff;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
-    width: 15vh;
+    width: max-content;
     height: min-content;
     font-size: 2rem;
+    padding: .5rem;
   }
 
-  .buttons button:hover{
+  .buttons a{
+    text-decoration: none;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
+  }
+
+  .buttons button:hover, .buttons a:hover{
     text-shadow: -2px 2px #000;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(253,45,154,0.3562675070028011) 100%);
   }
 
 .ocultar{
@@ -400,6 +477,23 @@ display: none !important;
 }
  *::selection{
   background-color: #feda75;
+ }
+
+ #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+ .main_contact{
+  background-image: none;
+  background: url(IMG_7811.mp4);
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 2em;
+  border: 1em solid rgb(253, 255, 247);
  }
 
 /*
@@ -424,12 +518,12 @@ header{
 }
 
 .header-left h1{
-  font-size: 3rem;
+  font-size: 2rem;
   transition: color 1.5s ease-out, font-size .5s;
 }
 
 .header-left h1:hover{
-  font-size: 3.3rem;
+  font-size: 2.3rem;
   color: #ff8a00;
 }
 
@@ -475,14 +569,56 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
 
 .section_body p{
   
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .title{
-  font-size: 7rem !important;
+  font-size: 6.5rem !important;
 }
 
+.main_projects{
+  overflow: auto;
+  width: auto;
+  display: grid;
+}
 
+.projects .project_child{
+  width: 90vw !important;
+}
+
+.child_title{
+  font-size: 3rem !important;
+}
+
+.projects button{
+  width: fit-content;
+  font-size: 2rem;
+}
+
+footer{
+  font-family: 'Coolveti';
+   color: #aaa;
+    text-align: center;
+    font-size: 1rem;
+    width: 100vw;
+    display: block;
+}
+
+footer a{
+  font-family: 'Coolveti';
+   color: #aaa;
+    text-align: center;
+    font-size: 1rem;
+    width: 100vw;
+}
+
+footer .a{
+float: none;
+}
+footer div{
+display: inline;
+float: none;
+}
 
 
 

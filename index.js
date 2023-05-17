@@ -2,9 +2,12 @@ var secciones = document.querySelectorAll(".title");
 var cuerposec = document.querySelectorAll(".section_body");
 var contenedor = document.getElementById("main");
 
+var backvid = document.getElementById("myVideo");
+
 secciones.forEach((elemento, clave) => {
   elemento.addEventListener("click", () => {
     let clase = "";
+    backvid.style.display='none';
     switch (clave) {
       case 0:
         clase = "main_aboutme";
@@ -20,6 +23,8 @@ secciones.forEach((elemento, clave) => {
         break;
         case 4:
         clase = "main_contact";
+        backvid.classList.toggle("ocultar");
+        backvid.classList.toggle("visible");
         break;
     }
     contenedor.classList.toggle(`${clase}`);
