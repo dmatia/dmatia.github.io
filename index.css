@@ -134,6 +134,8 @@ background: -webkit-linear-gradient(#a16eb6, #400c63);
 ////////////////////////////////
 */
 
+
+
 .main{
   height: 85vh;
   width: 70vw;
@@ -255,8 +257,7 @@ footer, footer a{
 footer a{
   cursor: pointer;
 }
-
-footer p:hover, footer a:hover{
+footer a:hover{
   color: #888;
 }
 
@@ -290,6 +291,9 @@ display: block;
 padding-top: 15vh;
 }
 
+.aboutme_text{
+  padding-left: .4em;
+}
 
 .visible{
   display: grid !important;
@@ -319,6 +323,7 @@ padding-top: 15vh;
   height: 85vh;
   border-radius: 25px;
   transition: .5s ease-in-out;
+  overflow: auto;
 }
 
 .main_do::before {
@@ -346,14 +351,49 @@ padding-top: 15vh;
   border-radius: 25px;
 opacity: 1;
 transition: 3s ease-in;
-
 }
 
 .do_exp{
   display: block;
-  padding-top: 10vh;
   color: #fff
 }
+
+.do .logobox{
+  display: block;
+}
+.do p{
+  font-size: 2.8rem;
+}
+
+.do img{
+  display: inline;
+  height: auto;
+  max-height: 1.5em;
+  width: auto;
+  transition: 0.5s;
+}
+
+.do img:hover{
+  max-height: 1.6em;
+  -webkit-filter: drop-shadow(-2px 2px 5px #fff);
+  filter: drop-shadow(-2px 2px 5px #fff);
+}
+
+.logobox a{
+  font-size: 2.8rem;
+}
+
+.logobox2 {
+margin-left: .5em;
+text-align: left;
+}
+
+.logobox2 img{
+  max-height: 1em;
+}
+.logobox img:hover{
+  max-height: 1.1em;}
+
 
 
 .titulo_exp:hover::after, .experience_exp:hover::after, .projects_exp:hover::after, .contact_exp:hover::after, .do_exp:hover::after{
@@ -571,6 +611,33 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
   
   font-size: 4rem;
 }
+
+
+.main_do{
+  display: block;
+
+.do p{
+  font-size: 3rem;
+}
+
+.do img{
+  max-height: 0.9em;
+}
+
+.do img:hover{
+  height: 1em !important;
+}
+
+.logobox2 a{
+  display: block;
+}
+
+
+.logobox2 p, .logobox2 a{
+  font-size: 2rem;
+}
+
+
 
 .title{
   font-size: 6.5rem !important;
