@@ -701,6 +701,10 @@ footer a{
     width: 100vw;
 }
 
+.titulo_exp, .do_exp, .experience_exp, .projects_exp, .contact_exp{
+  font-size: 5rem !important;
+}
+
 footer .a{
 float: none;
 }
