@@ -617,6 +617,10 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
   background-position: top;
 }
 
+.aboutme_text {
+  font-size: 2.5rem !important;
+}
+
 .experience a{
   font-size: 2rem !important;
 }
@@ -632,6 +636,7 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
 
 .main_do{
   display: block;
+}
 
 .do p{
   font-size: 3rem;
