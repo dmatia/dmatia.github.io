@@ -617,7 +617,10 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
   background-position: top;
 }
 
-.aboutme_text{
+.experience a{
+  font-size: 2rem !important;
+}
+.experience p{
   font-size: 2rem !important;
 }
 
