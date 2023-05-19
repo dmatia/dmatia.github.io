@@ -479,11 +479,20 @@ animation: title-expand;
 
   .child_title{
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: #d62976;
     line-height: 2;
     padding-left: 1em;
+    transition: .5s;
   }
+
+  .child_title:hover{
+    font-size: 2.7rem;
+    box-shadow: 2px -2px solid #fff;
+    color: #ccf;
+  }
+
+
 
 
   .project_child img{
