@@ -617,6 +617,10 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
   background-position: top;
 }
 
+.aboutme_text{
+  font-size: 2rem !important;
+}
+
 .section_body p{
   
   font-size: 4rem;
@@ -664,7 +668,7 @@ background: -webkit-linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)
 }
 
 .child_title{
-  font-size: 3rem !important;
+  font-size: 2rem !important;
 }
 
 .projects button{
