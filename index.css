@@ -322,7 +322,7 @@ padding-top: 15vh;
   z-index: 1;
   height: 85vh;
   border-radius: 25px;
-  transition: .5s ease-in-out;
+  transition: 5s ease-in-out;
   overflow: auto;
 }
 
@@ -344,13 +344,13 @@ padding-top: 15vh;
         rgba(254,46,106,1) 100%);
   z-index: -1;
   transition: 5s ease-in;
-  opacity: 0;
+  opacity: 1;
 }
 
 .main_do:hover::before {
   border-radius: 25px;
-opacity: 1;
-transition: 3s ease-in;
+opacity: 0;
+transition: 5s ease-in;
 }
 
 .do_exp{
@@ -391,7 +391,7 @@ text-align: left;
 .logobox2 img{
   max-height: 1em;
 }
-.logobox img:hover{
+.logobox2 img:hover{
   max-height: 1.1em;}
 
 
@@ -440,7 +440,17 @@ animation: title-expand;
     color: #0077b5;
   }
 
-  
+  .experience{
+    margin-left: .5em;
+  }
+  .experience a{
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+  .experience p{
+    font-size: 2.5rem;
+  }
+
   .projects{
     display: grid;
     grid-template-columns: 50% 50% 50% 50%;
